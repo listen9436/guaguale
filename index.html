@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="gb2312">
-    <title>¹Î¹ÎÀÖ</title>
+    <title>åˆ®åˆ®ä¹</title>
     <style type="text/css">
         *{
             margin: 0;
@@ -27,24 +27,24 @@
 <script type="text/javascript">
     var canvas = document.getElementById("canvas");
     var  context =  canvas.getContext('2d');
-    //»­ÃÉ²¼
+    //ç”»è’™å¸ƒ
     context.beginPath();
     context.fillStyle= 'grey';
     context.fillRect(0,0,768,900);
-    //Êó±ê°´ÏÂ¿ª¹Î
+    //é¼ æ ‡æŒ‰ä¸‹å¼€åˆ®
     canvas.onmousedown=function(){
         canvas.onmousemove = function(){
-            //»ñÈ¡Êó±ê×ø±ê
+            //è·å–é¼ æ ‡åæ ‡
             var x = event.clientX;
             var y  = event.clientY;
-            //destination-out             ÏÔÊ¾Ô­À´µÄ²»ÔÚºóÀ´ÇøÓòµÄ²¿·Ö
+            //destination-out             æ˜¾ç¤ºåŸæ¥çš„ä¸åœ¨åæ¥åŒºåŸŸçš„éƒ¨åˆ†
             context.globalCompositeOperation = "destination-out";
             context.beginPath();
             context.arc(x-200,y,30,0,Math.PI*2);
             context.fill();
         }
     }
-    //Êó±êÌ§Æğ²»¹Î¿ª
+    //é¼ æ ‡æŠ¬èµ·ä¸åˆ®å¼€
     canvas.onmouseup=function(){
         canvas.onmousemove = function(){
         }
